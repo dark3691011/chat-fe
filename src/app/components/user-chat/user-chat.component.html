@@ -1,0 +1,18 @@
+<div class="box-name" *ngIf="!name">
+  <div class="name" *ngFor="let item of names" (click)="chooseName(item)">
+    {{ item }}
+  </div>
+</div>
+<div *ngIf="name">
+  <h3>{{ name }}</h3>
+  <div class="box-name">
+    <div class="name" *ngFor="let item of names" (click)="openBox(item)">
+      {{ item }}
+    </div>
+  </div>
+  <div class="boxs-chat">
+    <ng-container *ngFor="let item of boxs">
+      <app-box-chat [name]="item"></app-box-chat>
+    </ng-container>
+  </div>
+</div>

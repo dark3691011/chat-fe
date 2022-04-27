@@ -1,0 +1,12 @@
+.box {
+  margin: 0px 2px 2px 2px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+  position: relative;
+  .input-chat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
